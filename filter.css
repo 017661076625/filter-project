@@ -1,0 +1,126 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(13, 0, 0);/*currentColor*/
+    /*display: flex;
+    justify-content: center;*/
+}
+.container{
+    width: 80vw;
+    /*height: 80vh;*/
+    background: #222;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+    box-shadow: 0 10px 20px rgba(0,0,0,1);
+}
+.img{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+/*@media (max-width:650px) {
+    .img {
+        margin-bottom: 70px;
+    }
+}*/
+.img img,canvas{
+    max-width: 60vw;
+    max-height: 60vh;
+    box-shadow: 10px 20px 35px rgba(0,0,0,1);
+    border: 1px solid #333;
+    border-radius: 10px;
+}
+
+.upload input{
+    display: none;
+}
+.upload label{
+    color: #fff;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border: 2px dashed #fff;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+/*
+.upload label{
+    animation: go 1s linear infinite; 
+}
+@keyframes go {
+    0% {
+        transform: scale(1.1);
+        opacity: 0;
+        font-weight: bold;
+    }
+    100% {
+        transform: scale(1.1);;
+        opacity: 1;
+        font-weight: bold;
+    }
+}
+*/
+
+.filters ul,.filters ul li{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    direction: rtl;
+}
+
+.filters ul li label{
+    color: #fff;
+    text-transform: capitalize;
+    transition: .8s;
+}
+.filters ul li input{
+    cursor: pointer;
+}
+.filters ul li:hover label{
+    color: #0ae16b;
+    font-weight: bold;
+}
+.filters ul li:last-child{
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.filters ul li a,span{
+    color: #fff;
+    padding: 12px 20px;
+    background: #1d4730;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0px 10px 20px rgb(0, 0, 0,1);
+    text-decoration: none;
+}
+.filters ul li a:hover,span:hover{
+    opacity: 0.8;
+}
+
+.filters ul li span{
+    background: rgb(75, 3, 3);
+}
+
+
+/* start media query */
+@media  (max-width: 650px){
+    .container{
+        grid-template-columns: 1fr;
+        gap: 70px;
+    }
+    .img img,canvas{
+        max-width: 70vw;
+    }
+}
+/* end media query */
